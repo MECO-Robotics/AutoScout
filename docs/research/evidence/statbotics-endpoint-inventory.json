@@ -1,0 +1,24 @@
+{
+  "checked_date": "2026-09-09",
+  "source": "https://api.statbotics.io/openapi.json",
+  "version": "3.0.0",
+  "paths": [
+    "/v3/",
+    "/v3/year/{year}",
+    "/v3/years",
+    "/v3/team/{team}",
+    "/v3/teams",
+    "/v3/team_year/{team}/{year}",
+    "/v3/team_years",
+    "/v3/event/{event}",
+    "/v3/events",
+    "/v3/team_event/{team}/{event}",
+    "/v3/team_events",
+    "/v3/match/{match}",
+    "/v3/matches"
+  ],
+  "live_probe": {
+    "url": "https://api.statbotics.io/v3/team_year/254/2026",
+    "http_status": 500
+  }
+}

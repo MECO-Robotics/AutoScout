@@ -1,0 +1,27 @@
+{
+  "full_name": "Team334/Castle",
+  "html_url": "https://github.com/Team334/Castle",
+  "description": "Scouting App for Team 334",
+  "default_branch": "main",
+  "pushed_at": "2026-04-15T22:46:36Z",
+  "archived": false,
+  "stargazers_count": 6,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree_sha": "392839d4476c2867edeee87dd7a7a8febc9bc466",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "392839d4476c2867edeee87dd7a7a8febc9bc466",
+  "checked_at": "2026-09-09",
+  "file_count": 132,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

@@ -1,0 +1,178 @@
+{
+  "checked_date": "2026-09-09",
+  "source": "https://frc-api-docs.firstinspires.org/api/collections/13920602/TW6zHTEi?segregateAuth=true&versionTag=latest",
+  "auth_type": "basic",
+  "endpoints": [
+    {
+      "name": "API Index",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/",
+      "example_names": [
+        "Details about the API",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Season Summary",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season",
+      "example_names": [
+        "unexpected error",
+        "Details about a season"
+      ]
+    },
+    {
+      "name": "Event Listings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/events?eventCode=&teamNumber=&districtCode=&excludeDistrict=&weekNumber&tournamentType",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "District Listings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/districts",
+      "example_names": [
+        "unexpected error",
+        "Response"
+      ]
+    },
+    {
+      "name": "Team Listings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/teams?teamNumber=&eventCode=&districtCode=&state=&page=",
+      "example_names": [
+        "unexpected error",
+        "List of teams"
+      ]
+    },
+    {
+      "name": "Team Avatar Listings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/avatars?teamNumber=&eventCode=&page=",
+      "example_names": [
+        "unexpected error",
+        "Response"
+      ]
+    },
+    {
+      "name": "Event Awards",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/awards/event/:eventCode",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Awards Listings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/awards/list",
+      "example_names": [
+        "unexpected error",
+        "Response"
+      ]
+    },
+    {
+      "name": "Team Awards",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/awards/team/:teamNumber",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Event Team Awards",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/awards/eventteam/:eventCode/:teamNumber",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Score Details",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/scores/:eventCode/:tournamentLevel?matchNumber=&start=&end=",
+      "example_names": [
+        "2015 Score Details",
+        "2016 Score Details",
+        "2017 Score Details",
+        "2018 Score Details",
+        "2019 Score Details",
+        "2020 Score Details",
+        "2024 Score Details",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Event Match Results",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/matches/:eventCode?tournamentLevel=&teamNumber=&matchNumber=&start=&end=",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Qual Performance Points",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/rankings/district/qualPerformanceCalculation",
+      "example_names": [
+        "Qual Performance Points"
+      ]
+    },
+    {
+      "name": "Alliance Selection Points",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/rankings/district/allianceSelectionCalculation",
+      "example_names": [
+        "Alliance Selection Points"
+      ]
+    },
+    {
+      "name": "Playoff Advancement Points",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/rankings/district/playoffAdvancementCalculation",
+      "example_names": [
+        "Playoff Advancement Points"
+      ]
+    },
+    {
+      "name": "Event Rankings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/rankings/:eventCode?teamNumber=&top=",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "District Rankings",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/rankings/district?districtCode=&teamNumber=&top=&page=",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Event Schedule",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/schedule/:eventCode?tournamentLevel=&teamNumber=&start=&end=",
+      "example_names": [
+        "Response",
+        "unexpected error"
+      ]
+    },
+    {
+      "name": "Event Alliances",
+      "method": "GET",
+      "url": "https://frc-api.firstinspires.org/v3.0/:season/alliances/:eventCode",
+      "example_names": []
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "match": "2026flor_qm6",
+  "note": "Five frames; box count is not accuracy. Concurrent existing worker may affect timing.",
+  "frames": [
+    {
+      "timestamp": 18,
+      "full": {
+        "boxes": 300,
+        "seconds": 1.383,
+        "capped": true
+      },
+      "main": {
+        "boxes": 300,
+        "seconds": 0.049,
+        "capped": true
+      }
+    },
+    {
+      "timestamp": 30,
+      "full": {
+        "boxes": 300,
+        "seconds": 0.03,
+        "capped": true
+      },
+      "main": {
+        "boxes": 300,
+        "seconds": 0.017,
+        "capped": true
+      }
+    },
+    {
+      "timestamp": 60,
+      "full": {
+        "boxes": 300,
+        "seconds": 0.036,
+        "capped": true
+      },
+      "main": {
+        "boxes": 300,
+        "seconds": 0.033,
+        "capped": true
+      }
+    },
+    {
+      "timestamp": 100,
+      "full": {
+        "boxes": 300,
+        "seconds": 0.053,
+        "capped": true
+      },
+      "main": {
+        "boxes": 300,
+        "seconds": 0.034,
+        "capped": true
+      }
+    },
+    {
+      "timestamp": 140,
+      "full": {
+        "boxes": 300,
+        "seconds": 0.052,
+        "capped": true
+      },
+      "main": {
+        "boxes": 49,
+        "seconds": 0.034,
+        "capped": false
+      }
+    }
+  ]
+}

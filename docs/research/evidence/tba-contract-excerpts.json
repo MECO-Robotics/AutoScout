@@ -1,0 +1,1478 @@
+{
+  "retrieved_date": "2026-09-09",
+  "source": "https://github.com/the-blue-alliance/the-blue-alliance/blob/4d7b599c56b2f2c21a85ea03e6db9c06ed8ec942/src/backend/web/static/swagger/api_v3.json",
+  "source_sha256": "1652077a3edbba838ada64875cf4bf591e88f7da1f8f4f351c7387ab55aad27d",
+  "api_version": "3.26.0",
+  "paths": {
+    "/status": {
+      "get": {
+        "tags": [
+          "TBA"
+        ],
+        "description": "Returns API status, and TBA status information.",
+        "operationId": "getStatus",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/API_Status"
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/events/{year}": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets a list of events in the given year.",
+        "operationId": "getEventsByYear",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/year"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Event"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets an Event.",
+        "operationId": "getEvent",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Event"
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/teams": {
+      "get": {
+        "tags": [
+          "event",
+          "team"
+        ],
+        "description": "Gets a list of `Team` objects that competed in the given event.",
+        "operationId": "getEventTeams",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Team"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/matches": {
+      "get": {
+        "tags": [
+          "event",
+          "match"
+        ],
+        "description": "Gets a list of matches for the given event.",
+        "operationId": "getEventMatches",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Match"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/match/{match_key}": {
+      "get": {
+        "tags": [
+          "match"
+        ],
+        "description": "Gets a `Match` object for the given match key.",
+        "operationId": "getMatch",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/match_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Match"
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/team/{team_key}/event/{event_key}/matches": {
+      "get": {
+        "tags": [
+          "team",
+          "event",
+          "match"
+        ],
+        "description": "Gets a list of matches for the given team and event.",
+        "operationId": "getTeamEventMatches",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/team_key"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Match"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/rankings": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets a list of team rankings for the Event.",
+        "operationId": "getEventRankings",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Event_Ranking"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/alliances": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets a list of Elimination Alliances for the given Event.",
+        "operationId": "getEventAlliances",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
+                  "items": {
+                    "$ref": "#/components/schemas/Elimination_Alliance"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/oprs": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.",
+        "operationId": "getEventOPRs",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Event_OPRs"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/coprs": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets a set of Event Component OPRs for the given Event.",
+        "operationId": "getEventCOPRs",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Event_COPRs"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/match/{match_key}/zebra_motionworks": {
+      "get": {
+        "tags": [
+          "match"
+        ],
+        "description": "Gets Zebra MotionWorks data for a Match for the given match key.",
+        "operationId": "getMatchZebra",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/match_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Zebra"
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/matches/timeseries": {
+      "get": {
+        "tags": [
+          "event",
+          "match"
+        ],
+        "description": "Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data.\n*WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up.\n*WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.",
+        "operationId": "getEventMatchTimeseries",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Match Key"
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/match/{match_key}/timeseries": {
+      "get": {
+        "tags": [
+          "match"
+        ],
+        "description": "Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available.\n*WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up.\n*WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.",
+        "operationId": "getMatchTimeseries",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/match_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/event/{event_key}/nexus_info": {
+      "get": {
+        "tags": [
+          "event"
+        ],
+        "description": "Gets live match-queuing info for an event from Nexus (https://frc.nexus/), or `null` if no data is currently available for this event.",
+        "operationId": "getEventNexusInfo",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/If-None-Match"
+          },
+          {
+            "$ref": "#/components/parameters/event_key"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "headers": {
+              "Cache-Control": {
+                "description": "The `Cache-Control` header, in particular the `max-age` value, contains the number of seconds the result should be considered valid for. During this time subsequent calls should return from the local cache directly.",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "ETag": {
+                "description": "Specifies the version of the most recent response. Used by clients in the `If-None-Match` request header.",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Nexus_Event_Info"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "304": {
+            "$ref": "#/components/responses/NotModified"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    }
+  },
+  "schemas": {
+    "Match": {
+      "required": [
+        "comp_level",
+        "event_key",
+        "key",
+        "match_number",
+        "set_number",
+        "alliances",
+        "winning_alliance",
+        "time",
+        "actual_time",
+        "predicted_time",
+        "post_result_time",
+        "score_breakdown",
+        "videos"
+      ],
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may be appended to the competition level if more than one match in required per set."
+        },
+        "comp_level": {
+          "$ref": "#/components/schemas/Comp_Level"
+        },
+        "set_number": {
+          "type": "integer",
+          "description": "The set number in a series of matches where more than one match is required in the match series."
+        },
+        "match_number": {
+          "type": "integer",
+          "description": "The match number of the match in the competition level."
+        },
+        "alliances": {
+          "type": "object",
+          "required": [
+            "red",
+            "blue"
+          ],
+          "properties": {
+            "red": {
+              "$ref": "#/components/schemas/Match_alliance"
+            },
+            "blue": {
+              "$ref": "#/components/schemas/Match_alliance"
+            }
+          },
+          "description": "A list of alliances, the teams on the alliances, and their score."
+        },
+        "winning_alliance": {
+          "description": "The color (red/blue) of the winning alliance. Will contain an empty string in the event of no winner, or a tie.",
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/AllianceColor"
+            }
+          ]
+        },
+        "event_key": {
+          "type": "string",
+          "description": "Event key of the event the match was played at."
+        },
+        "time": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the scheduled match time, as taken from the published schedule.",
+          "format": "int64"
+        },
+        "actual_time": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of actual match start time.",
+          "format": "int64"
+        },
+        "predicted_time": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) of the TBA predicted match start time.",
+          "format": "int64"
+        },
+        "post_result_time": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "UNIX timestamp (seconds since 1-Jan-1970 00:00:00) when the match result was posted.",
+          "format": "int64"
+        },
+        "score_breakdown": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2015"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2016"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2017"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2018"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2019"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2020"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2022"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2023"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2024"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2025"
+            },
+            {
+              "$ref": "#/components/schemas/Match_Score_Breakdown_2026"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null."
+        },
+        "videos": {
+          "type": "array",
+          "description": "Array of video objects associated with this match.",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "key"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Can be one of 'youtube' or 'tba'"
+              },
+              "key": {
+                "type": "string",
+                "description": "Unique key representing this video"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Match_alliance": {
+      "required": [
+        "score",
+        "team_keys",
+        "surrogate_team_keys",
+        "dq_team_keys"
+      ],
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "description": "Score for this alliance. Will be -1 for an unplayed match."
+        },
+        "team_keys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "TBA Team keys (eg `frc254`) for teams on this alliance."
+          }
+        },
+        "surrogate_team_keys": {
+          "type": "array",
+          "description": "TBA team keys (eg `frc254`) of any teams playing as a surrogate.",
+          "items": {
+            "type": "string",
+            "description": "Team key of a surrogate team."
+          }
+        },
+        "dq_team_keys": {
+          "type": "array",
+          "description": "TBA team keys (eg `frc254`) of any disqualified teams.",
+          "items": {
+            "type": "string",
+            "description": "Team key of a disqualified team."
+          }
+        }
+      }
+    },
+    "Match_Score_Breakdown_2026": {
+      "type": "object",
+      "required": [
+        "blue",
+        "red"
+      ],
+      "properties": {
+        "blue": {
+          "$ref": "#/components/schemas/Match_Score_Breakdown_2026_Alliance"
+        },
+        "red": {
+          "$ref": "#/components/schemas/Match_Score_Breakdown_2026_Alliance"
+        }
+      },
+      "description": "See the 2026 FMS API documentation for a description of each value. https://frc-api-docs.firstinspires.org"
+    },
+    "Match_Score_Breakdown_2026_Alliance": {
+      "type": "object",
+      "required": [
+        "adjustPoints",
+        "autoTowerPoints",
+        "autoTowerRobot1",
+        "autoTowerRobot2",
+        "autoTowerRobot3",
+        "endGameTowerPoints",
+        "endGameTowerRobot1",
+        "endGameTowerRobot2",
+        "endGameTowerRobot3",
+        "energizedAchieved",
+        "foulPoints",
+        "g206Penalty",
+        "hubScore",
+        "majorFoulCount",
+        "minorFoulCount",
+        "rp",
+        "superchargedAchieved",
+        "totalAutoPoints",
+        "totalPoints",
+        "totalTeleopPoints",
+        "totalTowerPoints",
+        "traversalAchieved"
+      ],
+      "properties": {
+        "adjustPoints": {
+          "type": "integer"
+        },
+        "autoTowerPoints": {
+          "type": "integer"
+        },
+        "autoTowerRobot1": {
+          "$ref": "#/components/schemas/TowerRobot_2026"
+        },
+        "autoTowerRobot2": {
+          "$ref": "#/components/schemas/TowerRobot_2026"
+        },
+        "autoTowerRobot3": {
+          "$ref": "#/components/schemas/TowerRobot_2026"
+        },
+        "endGameTowerPoints": {
+          "type": "integer"
+        },
+        "endGameTowerRobot1": {
+          "$ref": "#/components/schemas/TowerRobot_2026"
+        },
+        "endGameTowerRobot2": {
+          "$ref": "#/components/schemas/TowerRobot_2026"
+        },
+        "endGameTowerRobot3": {
+          "$ref": "#/components/schemas/TowerRobot_2026"
+        },
+        "energizedAchieved": {
+          "type": "boolean"
+        },
+        "foulPoints": {
+          "type": "integer"
+        },
+        "g206Penalty": {
+          "type": "boolean"
+        },
+        "hubScore": {
+          "$ref": "#/components/schemas/HubScore_2026"
+        },
+        "majorFoulCount": {
+          "type": "integer"
+        },
+        "minorFoulCount": {
+          "type": "integer"
+        },
+        "rp": {
+          "type": "number"
+        },
+        "superchargedAchieved": {
+          "type": "boolean"
+        },
+        "totalAutoPoints": {
+          "type": "integer"
+        },
+        "totalPoints": {
+          "type": "integer"
+        },
+        "totalTeleopPoints": {
+          "type": "integer"
+        },
+        "totalTowerPoints": {
+          "type": "integer"
+        },
+        "traversalAchieved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "HubScore_2026": {
+      "type": "object",
+      "required": [
+        "autoCount",
+        "autoPoints",
+        "endgameCount",
+        "endgamePoints",
+        "shift1Count",
+        "shift1Points",
+        "shift2Count",
+        "shift2Points",
+        "shift3Count",
+        "shift3Points",
+        "shift4Count",
+        "shift4Points",
+        "teleopCount",
+        "teleopPoints",
+        "totalCount",
+        "totalPoints",
+        "transitionCount",
+        "transitionPoints"
+      ],
+      "properties": {
+        "autoCount": {
+          "type": "integer"
+        },
+        "autoPoints": {
+          "type": "integer"
+        },
+        "endgameCount": {
+          "type": "integer"
+        },
+        "endgamePoints": {
+          "type": "integer"
+        },
+        "shift1Count": {
+          "type": "integer"
+        },
+        "shift1Points": {
+          "type": "integer"
+        },
+        "shift2Count": {
+          "type": "integer"
+        },
+        "shift2Points": {
+          "type": "integer"
+        },
+        "shift3Count": {
+          "type": "integer"
+        },
+        "shift3Points": {
+          "type": "integer"
+        },
+        "shift4Count": {
+          "type": "integer"
+        },
+        "shift4Points": {
+          "type": "integer"
+        },
+        "teleopCount": {
+          "type": "integer"
+        },
+        "teleopPoints": {
+          "type": "integer"
+        },
+        "totalCount": {
+          "type": "integer"
+        },
+        "totalPoints": {
+          "type": "integer"
+        },
+        "transitionCount": {
+          "type": "integer"
+        },
+        "transitionPoints": {
+          "type": "integer"
+        }
+      }
+    },
+    "TowerRobot_2026": {
+      "type": "string",
+      "enum": [
+        "Level1",
+        "Level2",
+        "Level3",
+        "None"
+      ]
+    },
+    "Zebra": {
+      "required": [
+        "key",
+        "times",
+        "alliances"
+      ],
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "TBA match key with the format `yyyy[EVENT_CODE]_[COMP_LEVEL]m[MATCH_NUMBER]`, where `yyyy` is the year, and `EVENT_CODE` is the event code of the event, `COMP_LEVEL` is (qm, ef, qf, sf, f), and `MATCH_NUMBER` is the match number in the competition level. A set number may be appended to the competition level if more than one match in required per set."
+        },
+        "times": {
+          "type": "array",
+          "description": "A list of relative timestamps for each data point. Each timestamp will correspond to the X and Y value at the same index in a team xs and ys arrays. `times`, all teams `xs` and all teams `ys` are guarenteed to be the same length.",
+          "items": {
+            "type": "number",
+            "format": "double",
+            "examples": [
+              0,
+              0.1,
+              0.2
+            ]
+          }
+        },
+        "alliances": {
+          "type": "object",
+          "properties": {
+            "red": {
+              "type": "array",
+              "description": "Zebra MotionWorks data for teams on the red alliance",
+              "items": {
+                "$ref": "#/components/schemas/Zebra_team"
+              }
+            },
+            "blue": {
+              "type": "array",
+              "description": "Zebra data for teams on the blue alliance",
+              "items": {
+                "$ref": "#/components/schemas/Zebra_team"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Zebra_team": {
+      "required": [
+        "team_key",
+        "xs",
+        "ys"
+      ],
+      "type": "object",
+      "properties": {
+        "team_key": {
+          "type": "string",
+          "description": "The TBA team key for the Zebra MotionWorks data.",
+          "examples": [
+            "frc7332"
+          ]
+        },
+        "xs": {
+          "type": "array",
+          "description": "A list containing doubles and nulls representing a teams X position in feet at the corresponding timestamp. A null value represents no tracking data for a given timestamp.",
+          "items": {
+            "type": "number",
+            "format": "double",
+            "examples": [
+              2.73,
+              2.7,
+              null
+            ]
+          }
+        },
+        "ys": {
+          "type": "array",
+          "description": "A list containing doubles and nulls representing a teams Y position in feet at the corresponding timestamp. A null value represents no tracking data for a given timestamp.",
+          "items": {
+            "type": "number",
+            "format": "double",
+            "examples": [
+              2.73,
+              2.7,
+              null
+            ]
+          }
+        }
+      }
+    },
+    "Webcast": {
+      "required": [
+        "channel",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Type of webcast, typically descriptive of the streaming provider.",
+          "enum": [
+            "youtube",
+            "twitch",
+            "ustream",
+            "iframe",
+            "html5",
+            "rtmp",
+            "livestream",
+            "direct_link",
+            "mms",
+            "justin",
+            "stemtv",
+            "dacast"
+          ]
+        },
+        "channel": {
+          "type": "string",
+          "description": "Type specific channel information. May be the YouTube stream, or Twitch channel name. In the case of iframe types, contains HTML to embed the stream in an HTML iframe."
+        },
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The date for the webcast in `yyyy-mm-dd` format. May be null."
+        },
+        "file": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "File identification as may be required for some types. May be null."
+        },
+        "status": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/WebcastStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The online status of the webcast, fetched from the streaming provider's API. May be null if not available."
+        },
+        "stream_title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The title of the stream from the streaming provider. May be null."
+        },
+        "viewer_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "The current viewer count from the streaming provider. May be null."
+        }
+      }
+    }
+  },
+  "note": "Selected contract excerpts; not a standalone resolvable OpenAPI document."
+}

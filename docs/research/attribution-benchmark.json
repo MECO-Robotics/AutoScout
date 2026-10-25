@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "created": "2026-09-10",
+  "status": "initial_single_event_manifest_no_human_labels",
+  "selection": "First six currently completed matches. Splits apply to future labeled evaluation; these reports have already been inspected for diagnostics, so no claim of untouched historical tests. Add Tallahassee before cross-event claims.",
+  "matches": [
+    {
+      "match_key": "2026flor_qm6",
+      "split": "development",
+      "baseline_report": "automatic/2026flor_qm6/ab38a2d33ed34f77860747f5f878f672/report.json",
+      "labels": null,
+      "annotation_status": "not_started"
+    },
+    {
+      "match_key": "2026flor_qm18",
+      "split": "development",
+      "baseline_report": "automatic/2026flor_qm18/d59f130e258f43daa0ffad270cd7cb5a/report.json",
+      "labels": null,
+      "annotation_status": "not_started"
+    },
+    {
+      "match_key": "2026flor_qm24",
+      "split": "development",
+      "baseline_report": "automatic/2026flor_qm24/2a8bac519a3a4c58b7a71d490ee7a860/report.json",
+      "labels": null,
+      "annotation_status": "not_started"
+    },
+    {
+      "match_key": "2026flor_qm30",
+      "split": "calibration",
+      "baseline_report": "automatic/2026flor_qm30/c26e9c84656f46acb2fd5012cb06817d/report.json",
+      "labels": null,
+      "annotation_status": "not_started"
+    },
+    {
+      "match_key": "2026flor_qm42",
+      "split": "test",
+      "baseline_report": "automatic/2026flor_qm42/081f4fa00b9f4a8fa8203092dc4afc4c/report.json",
+      "labels": null,
+      "annotation_status": "not_started"
+    },
+    {
+      "match_key": "2026flor_qm50",
+      "split": "test",
+      "baseline_report": "automatic/2026flor_qm50/e324124dee524c9b8b28d66e846436d1/report.json",
+      "labels": null,
+      "annotation_status": "not_started"
+    }
+  ]
+}

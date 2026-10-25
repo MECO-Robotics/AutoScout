@@ -1,0 +1,27 @@
+{
+  "full_name": "FIRSTTeam102/scoutradioz",
+  "html_url": "https://github.com/FIRSTTeam102/scoutradioz",
+  "description": "Scoutradioz, a multi-team FRC scouting app developed by The Gearheads. Designed for and running on Amazon Web Services.",
+  "default_branch": "master",
+  "pushed_at": "2026-08-04T19:02:01Z",
+  "archived": false,
+  "stargazers_count": 24,
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "tree_sha": "752473bc140838fcb4e5b1828a7929e3f8acc6e0",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "752473bc140838fcb4e5b1828a7929e3f8acc6e0",
+  "checked_at": "2026-09-09",
+  "file_count": 620,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

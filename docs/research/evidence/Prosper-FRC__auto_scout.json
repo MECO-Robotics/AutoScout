@@ -1,0 +1,20 @@
+{
+  "full_name": "Prosper-FRC/auto_scout",
+  "html_url": "https://github.com/Prosper-FRC/auto_scout",
+  "description": null,
+  "default_branch": "production",
+  "pushed_at": "2025-12-17T00:20:39Z",
+  "archived": false,
+  "stargazers_count": 1,
+  "license": null,
+  "tree_sha": "5bb5a2860b5dd42d0d7b3084a3c210b05094e2ee",
+  "files": [
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "5bb5a2860b5dd42d0d7b3084a3c210b05094e2ee",
+  "checked_at": "2026-09-09",
+  "file_count": 10,
+  "license_file_present": false,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

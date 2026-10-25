@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+data/
+.impeccable/review/
+.impeccable/cache/
+*.egg-info/
+graphify-out/
+.tmp-skills-sync/
+
+autoscout/static/playback/

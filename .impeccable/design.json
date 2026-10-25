@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T20:06:21.203272+00:00",
+  "title": "Design System: AutoScout",
+  "extensions": {
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-background",
+        "value": "background .15s ease",
+        "purpose": "State feedback; transitions removed for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1700px"
+      },
+      {
+        "name": "stack-review",
+        "value": "1150px"
+      },
+      {
+        "name": "horizontal-queue",
+        "value": "900px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "description": "Workspace action.",
+      "html": "<button class=\"ds-primary\">Accept</button>",
+      "css": ".ds-primary{font:550 14px system-ui;background:var(--accent,#176442);color:#fff;border:1px solid var(--line,#dce2da);border-radius:6px;min-height:36px;padding:8px 12px;cursor:pointer;transition:background .15s ease}.ds-primary:hover{background:#104c32}.ds-primary:focus-visible{outline:2px solid var(--focus,#277754);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "description": "Workspace action.",
+      "html": "<button class=\"ds-secondary\">Sync matches</button>",
+      "css": ".ds-secondary{font:550 14px system-ui;background:var(--paper,#fff);color:var(--ink,#202a25);border:1px solid var(--line,#dce2da);border-radius:6px;min-height:36px;padding:8px 12px;cursor:pointer;transition:background .15s ease}.ds-secondary:hover{background:#edf1eb}.ds-secondary:focus-visible{outline:2px solid var(--focus,#277754);outline-offset:3px}"
+    },
+    {
+      "name": "Quiet button",
+      "kind": "button",
+      "description": "Workspace action.",
+      "html": "<button class=\"ds-quiet\">Save setup</button>",
+      "css": ".ds-quiet{font:550 14px system-ui;background:transparent;color:var(--ink,#202a25);border:1px solid var(--line,#dce2da);border-radius:6px;min-height:36px;padding:8px 12px;cursor:pointer;transition:background .15s ease}.ds-quiet:hover{background:#edf1eb}.ds-quiet:focus-visible{outline:2px solid var(--focus,#277754);outline-offset:3px}"
+    },
+    {
+      "name": "Timing input",
+      "kind": "input",
+      "description": "Timing input",
+      "html": "<label class=\"ds-label\">Video time (sec)<input class=\"ds-input\" type=\"number\" value=\"23\"></label>",
+      "css": ".ds-label{font:600 12px/1.6 system-ui}.ds-input{display:block;font:14px system-ui;background:white;color:var(--ink,#202a25);border:1px solid #bfc9be;border-radius:5px;padding:7px 9px;min-height:36px}.ds-input:focus{border-color:var(--accent,#176442)}.ds-input:focus-visible{outline:2px solid var(--focus,#277754);outline-offset:3px}"
+    },
+    {
+      "name": "Review filter",
+      "kind": "chip",
+      "description": "Review filter",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">Candidates</button>",
+      "css": ".ds-filter{font:550 12px system-ui;background:var(--accent-soft,#e7f1e9);color:var(--accent,#176442);border:1px solid transparent;border-radius:6px;padding:7px 10px;min-height:32px}.ds-filter:focus-visible{outline:2px solid var(--focus,#277754);outline-offset:3px}"
+    },
+    {
+      "name": "Match navigation",
+      "kind": "nav",
+      "description": "Persistent queue with recording, alliance, and automatic analysis status.",
+      "html": "<button class=\"ds-match\" aria-current=\"true\">Qualification 1 \u00b7 Processing 42%</button>",
+      "css": ".ds-match{font:650 13px system-ui;background:white;color:var(--ink,#202a25);border:1px solid #ced8c9;border-radius:6px;padding:10px 12px}.ds-match:hover{background:#e4e9df}.ds-match:focus-visible{outline:2px solid var(--focus,#277754);outline-offset:3px}"
+    },
+    {
+      "name": "Review empty state",
+      "kind": "card",
+      "description": "Review empty state",
+      "html": "<div class=\"ds-empty\"><strong>No candidates waiting for review</strong><br>Add a reviewed observation while watching.</div>",
+      "css": ".ds-empty{font:13px/1.7 system-ui;text-align:center;background:#edf1e9;color:var(--muted,#56625a);border-radius:6px;padding:30px 20px}.ds-empty strong{color:var(--ink,#202a25);font-weight:600}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The automatic scouting workspace",
+    "overview": "A light neutral workspace puts automatic estimates and their recorded evidence first. Optional manual validation follows the automatic results. Dense controls, restrained forest green actions, and flat divided sections support sustained desktop review. This records the built interface; no reference composition was supplied.",
+    "keyCharacteristics": [
+      "Automatic estimates lead a persistent processing queue and video evidence.",
+      "Compact system typography and tabular measurements.",
+      "Explicit processing, estimated, unassigned, reviewed, and official-data labels."
+    ],
+    "rules": [],
+    "dos": [
+      "Do keep automatic estimates, raw crossings, reviewed observations, and official alliance data distinct.",
+      "Do preserve native video controls, visible focus, and reduced-motion behavior.",
+      "Do organize dense information with borders and tonal surfaces."
+    ],
+    "donts": [
+      "Don't present detections or estimated robot contributions as validated makes or official individual scores.",
+      "Don't substitute zero for missing or unreviewed data.",
+      "Don't add decorative shadows, gradients, or hero metrics to this review surface."
+    ]
+  },
+  "gpuAnalysisExtension": {
+    "placement": "Detection evidence below match video, before advanced calibration",
+    "overlay": "green fuel boxes, top ten confidence labels",
+    "states": [
+      "checking GPU",
+      "ready",
+      "processing",
+      "result",
+      "error"
+    ],
+    "captures": [
+      "docs/screenshots/gpu-desktop.png",
+      "docs/screenshots/gpu-mobile.png"
+    ],
+    "diagnosticAction": "Run diagnostic sample; hidden in the dashboard"
+  },
+  "automaticDashboard": {
+    "primaryFlow": "Read automatic estimates and evidence; manual validation is optional, with no processing start button",
+    "placement": "before match video",
+    "components": [
+      "queue status and progress",
+      "blue/red estimated fuel",
+      "processing time",
+      "six-team estimate table with blue/red unassigned rows",
+      "expandable volley evidence: time, alliance, score delta, visual crossings, unassigned",
+      "full analysis JSON export"
+    ],
+    "updates": "five-second selected-match polling and fifteen-second queue polling; independent background worker; stale selection responses ignored",
+    "robotOverlay": "amber normalized bounding boxes and team or track labels",
+    "captures": [
+      "docs/screenshots/automatic-desktop.png",
+      "docs/screenshots/automatic-mobile.png"
+    ],
+    "states": [
+      "queued",
+      "processing",
+      "complete",
+      "needs attention",
+      "waiting to resume"
+    ],
+    "unknownValues": "Pending alliance totals and unassigned counts; Unresolved team contributions; unavailable runtime shown as an em dash",
+    "manualValidation": "Optional reviewed observations and official alliance comparison below the automatic dashboard",
+    "diagnosticButton": "Run diagnostic sample remains hidden"
+  }
+}

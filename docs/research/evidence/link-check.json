@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-09",
+  "missing_local_links": [],
+  "github_source_checks": [
+    {
+      "url": "https://github.com/Aj-Mulley/FRCAIScoutingProgram/blob/73e4ee7cbfbf647798e17bf7210aae1f04a691cf/CSVBetterer.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/Aj-Mulley/FRCAIScoutingProgram/blob/73e4ee7cbfbf647798e17bf7210aae1f04a691cf/main.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/FIRSTTeam102/scoutradioz/blob/752473bc140838fcb4e5b1828a7929e3f8acc6e0/LICENSE",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/FRC-Team-955/2026-StreamScouting/blob/ce8695ed5613ecaec9cf2367a6b789954a2ff9d3/README.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/FRC-Team-955/2026-StreamScouting/blob/ce8695ed5613ecaec9cf2367a6b789954a2ff9d3/main.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/FelixWidmann/Object_Tracking/blob/f12fad2fde8be7581c8b6682929f63272e983b4d/README.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/PWNAGERobotics/ScoutingPASS/blob/e362d4ce3c9e2d232a0c74ffd8be7a42659fbb4a/LICENSE",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/Team334/Castle/blob/392839d4476c2867edeee87dd7a7a8febc9bc466/app/scout/nexus.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/ai4funhobby-oss/RobotTracking/blob/b1af3ef2811f59c25e3908cc96720707e055e66e/plot_robot_traces_trocr.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/avgupta456/statbotics/blob/a2cea5553e35693d423400f419bd770cb2143408/backend/src/db/models/match.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/avgupta456/statbotics/blob/a2cea5553e35693d423400f419bd770cb2143408/backend/src/db/models/team_year.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/derek-pohl/ai-scouting/blob/97184951f9646f047cb5587f4d0aebac8413a729/README.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/derek-pohl/ai-scouting/blob/97184951f9646f047cb5587f4d0aebac8413a729/app.py",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/the-blue-alliance/the-blue-alliance/blob/4d7b599c56b2f2c21a85ea03e6db9c06ed8ec942/src/backend/common/helpers/tests/data/2026marea_matches.json",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/the-blue-alliance/the-blue-alliance/blob/4d7b599c56b2f2c21a85ea03e6db9c06ed8ec942/src/backend/web/static/swagger/api_v3.json",
+      "status": 200
+    }
+  ]
+}

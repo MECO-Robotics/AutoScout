@@ -1,0 +1,28 @@
+{
+  "version": "auto-v2",
+  "frames_processed": 720,
+  "frames_total": 720,
+  "elapsed_seconds": 57.12,
+  "capped_frames": 126,
+  "match_window": {
+    "confirmed_end": null,
+    "inference_end": 12.0,
+    "full_clip": true,
+    "confidence": "uncertain",
+    "reason": "insufficient_final_countdown",
+    "buffer_seconds": 5.0,
+    "evidence": [],
+    "prepass_frames": 720
+  },
+  "stage_times": {
+    "scoreboard_scan": 23.01,
+    "gpu_analysis": 33.6
+  },
+  "raw_crossing_counts": {
+    "blue": 0,
+    "red": 0
+  },
+  "identified_tracks": {
+    "10": 8324
+  }
+}

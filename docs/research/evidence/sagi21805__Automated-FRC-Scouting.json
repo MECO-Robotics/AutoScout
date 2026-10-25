@@ -1,0 +1,18 @@
+{
+  "full_name": "sagi21805/Automated-FRC-Scouting",
+  "html_url": "https://github.com/sagi21805/Automated-FRC-Scouting",
+  "description": "The goal of this project is to make an automated scouting program for a frc team to a specific game and thus remove the scouting position or make it more interesting",
+  "default_branch": "feature/tracker",
+  "pushed_at": "2023-11-10T21:06:32Z",
+  "archived": false,
+  "stargazers_count": 0,
+  "license": null,
+  "tree_sha": "fd63d1816a24e22a5749cf89185e8b8f6d37ce48",
+  "files": [],
+  "tree_truncated": false,
+  "commit_sha": "fd63d1816a24e22a5749cf89185e8b8f6d37ce48",
+  "checked_at": "2026-09-09",
+  "file_count": 25,
+  "license_file_present": false,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

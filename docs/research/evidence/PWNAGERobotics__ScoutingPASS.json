@@ -1,0 +1,21 @@
+{
+  "full_name": "PWNAGERobotics/ScoutingPASS",
+  "html_url": "https://github.com/PWNAGERobotics/ScoutingPASS",
+  "description": "A FRC Competition Scouting Application",
+  "default_branch": "main",
+  "pushed_at": "2026-01-25T16:39:19Z",
+  "archived": false,
+  "stargazers_count": 76,
+  "license": null,
+  "tree_sha": "e362d4ce3c9e2d232a0c74ffd8be7a42659fbb4a",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "e362d4ce3c9e2d232a0c74ffd8be7a42659fbb4a",
+  "checked_at": "2026-09-09",
+  "file_count": 48,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

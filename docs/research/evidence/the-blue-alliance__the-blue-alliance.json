@@ -1,0 +1,27 @@
+{
+  "full_name": "the-blue-alliance/the-blue-alliance",
+  "html_url": "https://github.com/the-blue-alliance/the-blue-alliance",
+  "description": "A webapp for accessing information about the FIRST Robotics Competition.",
+  "default_branch": "main",
+  "pushed_at": "2026-09-09T15:05:06Z",
+  "archived": false,
+  "stargazers_count": 452,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree_sha": "4d7b599c56b2f2c21a85ea03e6db9c06ed8ec942",
+  "files": [
+    "README.md",
+    "src/backend/web/static/swagger/api_v3.json"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "4d7b599c56b2f2c21a85ea03e6db9c06ed8ec942",
+  "checked_at": "2026-09-09",
+  "file_count": 4778,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

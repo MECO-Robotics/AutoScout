@@ -1,0 +1,27 @@
+{
+  "full_name": "FRC2713/QRScout",
+  "html_url": "https://github.com/FRC2713/QRScout",
+  "description": "A QR Code Based Scouting System for FRC",
+  "default_branch": "main",
+  "pushed_at": "2026-07-05T23:42:06Z",
+  "archived": false,
+  "stargazers_count": 29,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree_sha": "581ad2e489dc668a7f0543973d4524c8b1235d3c",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "581ad2e489dc668a7f0543973d4524c8b1235d3c",
+  "checked_at": "2026-09-09",
+  "file_count": 135,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

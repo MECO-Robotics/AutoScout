@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frc-autoscout"
+version = "0.1.0"
+description = "Local FRC match footage, candidate detection, review, and scoring reconciliation"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "httpx>=0.27,<1", "beautifulsoup4>=4.12,<5", "numpy>=2,<3", "opencv-python-headless>=4.10,<6", "yt-dlp>=2026.8.19", "imageio-ffmpeg>=0.6,<1", "python-multipart>=0.0.20,<1"]
+
+[project.optional-dependencies]
+ml = ["ultralytics==8.4.146", "rapidocr==3.9.2", "onnxruntime==1.29.0", "scipy>=1.17,<2"]
+dev = ["pytest>=8,<10", "playwright>=1.50,<2"]
+graphify = ["graphifyy>=0.9.57,<1"]
+
+[project.scripts]
+autoscout = "autoscout.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["autoscout*"]
+
+[tool.setuptools.package-data]
+autoscout = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+{
+  "full_name": "churley862/FRC_auto_scout",
+  "html_url": "https://github.com/churley862/FRC_auto_scout",
+  "description": "Automatic video based scouting of FRC Matches",
+  "default_branch": "main",
+  "pushed_at": "2024-04-28T06:54:31Z",
+  "archived": false,
+  "stargazers_count": 0,
+  "license": null,
+  "tree_sha": "7a03af6b7d9e8f20b8b1df2bb9755bd5281e8417",
+  "files": [
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "7a03af6b7d9e8f20b8b1df2bb9755bd5281e8417",
+  "checked_at": "2026-09-09",
+  "file_count": 1,
+  "license_file_present": false,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

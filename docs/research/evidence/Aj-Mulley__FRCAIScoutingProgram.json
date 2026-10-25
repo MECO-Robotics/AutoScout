@@ -1,0 +1,29 @@
+{
+  "full_name": "Aj-Mulley/FRCAIScoutingProgram",
+  "html_url": "https://github.com/Aj-Mulley/FRCAIScoutingProgram",
+  "description": "An AI program to automatically track and scout robots with video taken from a twitch stream.",
+  "default_branch": "main",
+  "pushed_at": "2025-05-08T02:15:20Z",
+  "archived": false,
+  "stargazers_count": 1,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree_sha": "73e4ee7cbfbf647798e17bf7210aae1f04a691cf",
+  "files": [
+    "CSVBetterer.py",
+    "LICENSE",
+    "README.md",
+    "main.py"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "73e4ee7cbfbf647798e17bf7210aae1f04a691cf",
+  "checked_at": "2026-09-09",
+  "file_count": 13,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

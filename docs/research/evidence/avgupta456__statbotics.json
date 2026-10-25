@@ -1,0 +1,27 @@
+{
+  "full_name": "avgupta456/statbotics",
+  "html_url": "https://github.com/avgupta456/statbotics",
+  "description": "\ud83d\udcc8 Modernizing Data Analytics for FRC Robotics",
+  "default_branch": "master",
+  "pushed_at": "2026-06-13T23:05:39Z",
+  "archived": false,
+  "stargazers_count": 102,
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree_sha": "a2cea5553e35693d423400f419bd770cb2143408",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "a2cea5553e35693d423400f419bd770cb2143408",
+  "checked_at": "2026-09-09",
+  "file_count": 247,
+  "license_file_present": true,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

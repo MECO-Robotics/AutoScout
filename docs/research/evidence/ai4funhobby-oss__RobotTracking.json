@@ -1,0 +1,21 @@
+{
+  "full_name": "ai4funhobby-oss/RobotTracking",
+  "html_url": "https://github.com/ai4funhobby-oss/RobotTracking",
+  "description": "FRC robot tracking practice to help autonomous scouting system.",
+  "default_branch": "main",
+  "pushed_at": "2026-03-02T07:35:34Z",
+  "archived": false,
+  "stargazers_count": 0,
+  "license": null,
+  "tree_sha": "b1af3ef2811f59c25e3908cc96720707e055e66e",
+  "files": [
+    "README.md",
+    "plot_robot_traces_trocr.py"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "b1af3ef2811f59c25e3908cc96720707e055e66e",
+  "checked_at": "2026-09-09",
+  "file_count": 120,
+  "license_file_present": false,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

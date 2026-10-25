@@ -1,0 +1,21 @@
+{
+  "full_name": "derek-pohl/ai-scouting",
+  "html_url": "https://github.com/derek-pohl/ai-scouting",
+  "description": null,
+  "default_branch": "main",
+  "pushed_at": "2026-07-06T02:13:16Z",
+  "archived": false,
+  "stargazers_count": 0,
+  "license": null,
+  "tree_sha": "97184951f9646f047cb5587f4d0aebac8413a729",
+  "files": [
+    "README.md",
+    "app.py"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "97184951f9646f047cb5587f4d0aebac8413a729",
+  "checked_at": "2026-09-09",
+  "file_count": 9,
+  "license_file_present": false,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

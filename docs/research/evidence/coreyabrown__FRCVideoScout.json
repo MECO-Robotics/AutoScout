@@ -1,0 +1,20 @@
+{
+  "full_name": "coreyabrown/FRCVideoScout",
+  "html_url": "https://github.com/coreyabrown/FRCVideoScout",
+  "description": "This is an attempt to scout FIRST Robotics Competition robots via videos. ",
+  "default_branch": "main",
+  "pushed_at": "2022-02-04T05:58:39Z",
+  "archived": false,
+  "stargazers_count": 0,
+  "license": null,
+  "tree_sha": "60c6773bf87c7d78cce62187806aabf4a86c8dab",
+  "files": [
+    "README.md"
+  ],
+  "tree_truncated": false,
+  "commit_sha": "60c6773bf87c7d78cce62187806aabf4a86c8dab",
+  "checked_at": "2026-09-09",
+  "file_count": 6,
+  "license_file_present": false,
+  "files_note": "Selected paths only; full tree was inspected for inventory, not all files were read."
+}

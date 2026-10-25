@@ -1,0 +1,18 @@
+[Unit]
+Description=AutoScout dashboard and automatic GPU queue
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/mnt/zfs-storage/All Drives/Brian Data/autoscout
+ExecStart="/mnt/zfs-storage/All Drives/Brian Data/autoscout/.venv/bin/python" -m autoscout.cli serve --host 127.0.0.1 --host 100.121.248.52 --port 8324
+Environment=PYTHONUNBUFFERED=1
+Environment=AUTOSCOUT_GPU_DEVICES=0
+Environment=AUTOSCOUT_MAX_ATTEMPTS=3
+Restart=always
+RestartSec=10
+TimeoutStopSec=45
+KillMode=control-group
+
+[Install]
+WantedBy=default.target
